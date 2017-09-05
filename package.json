@@ -1,0 +1,74 @@
+{
+  "name": "goodmotion",
+  "description": "Goodmotion theme for Ghost. Beautiful, minimal and responsive.",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=1.2.0"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Goodmotion",
+    "email": "info@goodmotion.fr",
+    "url": "https://www.goodmotion.fr"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": ["Minimal", "Magazine"]
+  },
+  "scripts": {
+    "format":
+      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"assets/js/**/*.{js,jsx}\"",
+    "lint": "eslint assets/**/*.{js,jsx} --quiet",
+    "clean": "rm -rf assets/built/",
+    "build": "npm run clean && node ./node_modules/webpack/bin/webpack.js",
+    "dev": "npm run clean && npm run webpack-dev-server -- --env.env=dev",
+    "webpack-dev-server": "webpack-dev-server"
+  },
+  "keywords": ["ghost", "theme"],
+  "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.5",
+    "cssnano": "3.7.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.3.0",
+    "exports-loader": "^0.6.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "node-sass": "^4.5.3",
+    "optimize-css-assets-webpack-plugin": "^3.1.1",
+    "postcss": "^6.0.10",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-properties": "^5.0.1",
+    "postcss-easy-import": "1.0.1",
+    "postcss-loader": "^2.0.6",
+    "precss": "^2.0.0",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-order": "^0.6.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "config": {
+    "posts_per_page": 25
+  },
+  "dependencies": {}
+}
