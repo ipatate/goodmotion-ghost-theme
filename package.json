@@ -17,18 +17,23 @@
   },
   "gpm": {
     "type": "theme",
-    "categories": ["Minimal", "Magazine"]
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
   },
   "scripts": {
-    "format":
-      "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"assets/js/**/*.{js,jsx}\"",
+    "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"assets/js/**/*.{js,jsx}\"",
     "lint": "eslint assets/**/*.{js,jsx} --quiet",
     "clean": "rm -rf assets/built/",
     "build": "npm run clean && node ./node_modules/webpack/bin/webpack.js",
     "dev": "npm run clean && npm run webpack-dev-server -- --env.env=dev",
     "webpack-dev-server": "webpack-dev-server"
   },
-  "keywords": ["ghost", "theme"],
+  "keywords": [
+    "ghost",
+    "theme"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.3",
     "babel-core": "^6.26.0",
@@ -48,6 +53,7 @@
     "exports-loader": "^0.6.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "img-loader": "^2.0.0",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^3.1.1",
     "postcss": "^6.0.10",
